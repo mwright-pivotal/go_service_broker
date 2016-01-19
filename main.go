@@ -22,7 +22,7 @@ func init() {
 	defaultConfigPath := utils.GetPath([]string{"assets", "config.json"})
 	flag.StringVar(&options.ConfigPath, "c", defaultConfigPath, "use '-c' option to specify the config file path")
 
-	flag.StringVar(&options.Cloud, "cloud", utils.AWS, "use '--cloud' option to specify the cloud client to use: AWS or SoftLayer (SL)")
+	flag.StringVar(&options.Cloud, "cloud", utils.AWS, "use '--cloud' option to specify the cloud client to use: Vware or AWS or SoftLayer (SL)")
 
 	flag.Parse()
 }
@@ -53,7 +53,7 @@ func checkCloudName(name string) error {
 	fmt.Println(name)
 
 	switch name {
-		case utils.AWS, utils.SOFTLAYER, utils.SL:
+		case utils.VMWARE, utils.AWS, utils.SOFTLAYER, utils.SL:
 		return nil
 	}
 

@@ -4,4 +4,5 @@ const (
 	AWS = "AWS"
 	SOFTLAYER = "SoftLayer"
 	SL = "SL"
+	VMWARE = "Vmware"
 )

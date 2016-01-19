@@ -47,6 +47,8 @@ func (c *Controller) Catalog(w http.ResponseWriter, r *http.Request) {
 		catalogFileName = "catalog.AWS.json"
 	} else if c.cloudName == utils.SOFTLAYER || c.cloudName == utils.SL {
 		catalogFileName = "catalog.SoftLayer.json"
+	} else if  c.cloudName == utils.VMWARE {
+		catalogFileName = "catalog.Vmware.json"
 	}
 
 	err := utils.ReadAndUnmarshal(&catalog, conf.CatalogPath, catalogFileName)
@@ -257,6 +259,9 @@ func createCloudClient(cloudName string) (client.Client, error) {
 
 		case utils.SOFTLAYER, utils.SL:
 			return client.NewSoftLayerClient(), nil
+
+		case utils.VMWARE:
+			return client.NewVmwareClient(), nil
 	}
 
 	return nil, errors.New(fmt.Sprintf("Invalid cloud name: %s", cloudName))
