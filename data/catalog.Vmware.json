@@ -1,0 +1,58 @@
+{
+  "services": [
+    {
+      "name": "Vmware",
+      "id": "vmware-service-guid",
+      "description": "Provides the vmware vsphere VM service, including VM creation, key pair injection",
+      "requires": [],
+      "tags": ["payments","ftp"],
+      "bindable": true,
+      "metadata": {
+        "provider": {
+          "name": "Vmware"
+        },
+        "listing": {
+          "imageUrl": "http://www.tech-wiki.net/images/9/95/Vmware_logo.png",
+          "blurb": "A vmware CF broker to create VMs",
+          "longDescription": "Provides a vmware VM service, including VM creation, key pair injection"
+        },
+        "displayName": "vmWare Service"
+      },
+      "dashboard_client": {
+        "id": "<sso-test>",
+        "secret": "<sso-secret>",
+        "redirect_uri": "https://192.168.0.245:9443/vsphere-client/"
+      },
+      "plan_updateable": true,
+      "plans": [
+        {
+          "name": "small",
+          "id": "small-plan-guid",
+          "description": "stands for small type VM",
+          "metadata": {
+            "cost": 0,
+            "bullets": ["service port 8989"]
+          }
+        },
+        {
+          "name": "medium",
+          "id": "medium-plan-guid",
+          "description": "stands for medium type VM",
+          "metadata": {
+            "cost": 0,
+            "bullets": []
+          }
+        },
+        {
+          "name": "large",
+          "id": "large-plan-guid",
+          "description": "stands for large type VM",
+          "metadata": {
+            "cost": 0,
+            "bullets": []
+          }
+        }
+      ]
+    }
+  ]
+}
