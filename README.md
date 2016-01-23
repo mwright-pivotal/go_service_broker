@@ -1,5 +1,10 @@
 [![Join the chat at https://gitter.im/cloudfoundry-samples/go_service_broker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cloudfoundry-samples/go_service_broker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+UPDATE:  Adding support for vsphere.  - mwright
+references:  
+    https://godoc.org/github.com/vmware/govmomi
+    http://www.virtuallyghetto.com/2014/09/govmomi-vsphere-sdk-for-go-govc-cli-kubernetes-on-vsphere-part-1.html
+    
 go_service_broker
 =================
 
